@@ -4,17 +4,45 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>População Brasileira</title>
+    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="utils/graph.ts"></script>
+    <style>
+      #opt{
+        display: inline-block;
+      }
+
+      #parent{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      #container{
+        display: block;
+        width: 200px;
+        height: 255px;
+      }
+
+      #container p{
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
     <h1>Escolha uma das regiões abaixo:</h1>
-      <p>0. Brasil</p>
-      <p>1. Norte</p>
-      <p>2. Norderte</p>
-      <p>3. Sudeste</p>
-      <p>4. Sul</p>
-      <p>5. Centro-Oeste</p>
+    <div id="parent">
+      <div id="opt">
+        <p>0. Brasil</p>
+        <p>1. Norte</p>
+        <p>2. Norderte</p>
+        <p>3. Sudeste</p>
+        <p>4. Sul</p>
+        <p>5. Centro-Oeste</p>
+      </div>
+      <div id="container"></div>
+    </div>
+    <input type="text" id="option" placeholder="Informe o número">
+    <button id="btn_find">Buscar</button>
   </body>
 </html>
